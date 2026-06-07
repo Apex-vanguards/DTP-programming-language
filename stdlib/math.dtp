@@ -1,0 +1,94 @@
+ext fn sqrt(x: f64) -> f64;
+ext fn pow(base: f64, exp: f64) -> f64;
+ext fn sin(x: f64) -> f64;
+ext fn cos(x: f64) -> f64;
+ext fn tan(x: f64) -> f64;
+ext fn asin(x: f64) -> f64;
+ext fn acos(x: f64) -> f64;
+ext fn atan(x: f64) -> f64;
+ext fn atan2(y: f64, x: f64) -> f64;
+ext fn log(x: f64) -> f64;
+ext fn log2(x: f64) -> f64;
+ext fn log10(x: f64) -> f64;
+ext fn exp(x: f64) -> f64;
+ext fn fabs(x: f64) -> f64;
+ext fn floor(x: f64) -> f64;
+ext fn ceil(x: f64) -> f64;
+ext fn round(x: f64) -> f64;
+ext fn fmod(x: f64, y: f64) -> f64;
+
+pub fn abs_i64(x: i64) -> i64 {
+    if x < 0 { ret 0 - x; }
+    ret x;
+}
+
+pub fn min_i64(a: i64, b: i64) -> i64 {
+    if a < b { ret a; }
+    ret b;
+}
+
+pub fn max_i64(a: i64, b: i64) -> i64 {
+    if a > b { ret a; }
+    ret b;
+}
+
+pub fn min_f64(a: f64, b: f64) -> f64 {
+    if a < b { ret a; }
+    ret b;
+}
+
+pub fn max_f64(a: f64, b: f64) -> f64 {
+    if a > b { ret a; }
+    ret b;
+}
+
+pub fn clamp_i64(v: i64, lo: i64, hi: i64) -> i64 {
+    if v < lo { ret lo; }
+    if v > hi { ret hi; }
+    ret v;
+}
+
+pub fn clamp_f64(v: f64, lo: f64, hi: f64) -> f64 {
+    if v < lo { ret lo; }
+    if v > hi { ret hi; }
+    ret v;
+}
+
+pub fn gcd(a: i64, b: i64) -> i64 {
+    let mut x: i64 = a;
+    let mut y: i64 = b;
+    while y != 0 {
+        let t: i64 = y;
+        y = x % y;
+        x = t;
+    }
+    ret x;
+}
+
+pub fn lcm(a: i64, b: i64) -> i64 {
+    ret (a / gcd(a, b)) * b;
+}
+
+pub fn pow_i64(base: i64, exp: i64) -> i64 {
+    let mut result: i64 = 1;
+    let mut b: i64 = base;
+    let mut e: i64 = exp;
+    while e > 0 {
+        if (e % 2) == 1 { result = result * b; }
+        b = b * b;
+        e = e / 2;
+    }
+    ret result;
+}
+
+pub fn is_prime(n: i64) -> bool {
+    if n < 2 { ret false; }
+    if n < 4 { ret true; }
+    if (n % 2) == 0 { ret false; }
+    let mut i: i64 = 3;
+    while (i * i) <= n {
+        if (n % i) == 0 { ret false; }
+        i = i + 2;
+    }
+    ret true;
+}

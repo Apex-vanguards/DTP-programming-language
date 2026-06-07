@@ -1,0 +1,22 @@
+ext fn printf(fmt: str) -> i32;
+ext fn scanf(fmt: str) -> i32;
+ext fn fflush(stream: *u8) -> i32;
+ext fn puts(s: str) -> i32;
+ext fn getchar() -> i32;
+ext fn putchar(c: i32) -> i32;
+
+pub fn read_i64() -> i64 {
+    ret read_i64();
+}
+
+pub fn read_f64() -> f64 {
+    ret read_f64();
+}
+
+pub fn read_str() -> str {
+    ret read_str();
+}
+
+pub fn flush() -> i32 {
+    ret fflush(null);
+}

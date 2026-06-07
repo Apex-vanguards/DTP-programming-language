@@ -1,0 +1,11 @@
+ext fn strlen(s: str) -> u64;
+ext fn strcpy(dst: *u8, src: str) -> *u8;
+ext fn strncpy(dst: *u8, src: str, n: u64) -> *u8;
+ext fn strcat(dst: *u8, src: str) -> *u8;
+ext fn strcmp(a: str, b: str) -> i32;
+ext fn strncmp(a: str, b: str, n: u64) -> i32;
+ext fn strchr(s: str, c: i32) -> *u8;
+ext fn strstr(haystack: str, needle: str) -> *u8;
+ext fn atoi(s: str) -> i32;
+ext fn atol(s: str) -> i64;
+ext fn atof(s: str) -> f64;
