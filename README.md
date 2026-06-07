@@ -1,4 +1,4 @@
-# DTP — Direct Transfer Protocol Language
+# DTP — DarkDevil Tuncypasha Programmercat
 
 A fast, lean, zero-overhead systems programming language that compiles to C99 and then to native machine code via GCC or Clang.
 
