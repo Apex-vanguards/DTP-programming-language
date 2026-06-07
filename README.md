@@ -1,5 +1,7 @@
 # DTP — DarkDevil Tuncypasha Programmercat
 
+(We have a lot of bugs, i try to fix. it is first version of dtp)
+
 A fast, lean, zero-overhead systems programming language that compiles to C99 and then to native machine code via GCC or Clang.
 
 ```
